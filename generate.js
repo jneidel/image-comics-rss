@@ -17,22 +17,22 @@ feeds.master = new Feed.Feed({
 });
 feeds.press = new Feed.Feed({
   title: "Image Comics Press Releases",
-  description: "In-offical Image Comics rss press releases feed",
+  description: "Unoffical Image Comics rss press releases feed",
   link: "https://rss.jneidel.com/image/press",
 });
 feeds.news = new Feed.Feed({
   title: "Image Comics News",
-  description: "In-offical Image Comics rss news feed",
+  description: "Unoffical Image Comics rss news feed",
   link: "https://rss.jneidel.com/image/news",
 });
 feeds.solicitations = new Feed.Feed({
   title: "Image Comics Solicitations",
-  description: "In-offical Image Comics rss solicitations feed",
+  description: "Unoffical Image Comics rss solicitations feed",
   link: "https://rss.jneidel.com/image/solicitations",
 });
 feeds.features = new Feed.Feed({
   title: "Image Comics Features",
-  description: "In-offical Image Comics rss features feed",
+  description: "Unoffical Image Comics rss features feed",
   link: "https://rss.jneidel.com/image/features",
 });
 
