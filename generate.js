@@ -93,10 +93,10 @@ Object.keys(feeds).forEach(name => {
               keys.unshift(0);
               const texts = keys.map(key => {
                 const text = ps[key].children
-                  .filter(child => child.type === "text")
+                  .filter(child => child.type === "text" || child.name === "em")
+                  .reverse()
                   .reduce((acc, cur) => {
-                    return `${cur.data}
-${acc}`;
+                    return cur.type === "text" ? `${cur.data}${acc}` : `${cur.children[0].data}${acc}`
                   }, "");
                 return text;
               });
@@ -135,7 +135,6 @@ ${acc}`;
         }
       });
 
-    // console.log( feed.rss2() )
     Object.keys(feeds).forEach(name => {
       const out = path.resolve(__dirname, name);
       const feedData = feeds[name].rss2();
